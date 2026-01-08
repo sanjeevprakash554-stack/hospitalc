@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium pediatric healthcare hospital providing trusted care from birth to 10 years. Book your child's appointment today.">
+    <meta name="keywords" content="pediatric hospital, children healthcare, pediatrician, child health, vaccination, pediatric care">
+    <title>LittleHearts Pediatric Hospital - Trusted Pediatric Care from Birth to 10 Years</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fbfc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+        }
+
+        /* Color Palette - Child-Friendly & Professional */
+        :root {
+            --primary: #4a90e2;      /* Soft Blue */
+            --secondary: #50c878;    /* Fresh Green */
+            --accent: #ff85a1;       /* Warm Pink */
+            --light: #f0f8ff;
+            --dark: #2c3e50;
+            --gray: #ecf0f1;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }   3
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+
+        p { margin-bottom: 1rem; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3a7bc8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #3ab35f;
+        }
+
+        .btn-age-care {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        .btn-age-care:hover {
+            background: #e66b8d;
+        }
+
+        .btn-emergency {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-emergency:hover {
+            background: #c0392b;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .logo h2 {
+            font-weight: 800;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        /* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Hero Image */
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.20);
+    z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+/* Hero Text */
+.hero-title {
+margin-left: -140px;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: fit-content;
+    }
+}
+
+
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.);
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Age Care Section */
+        .age-care {
+            padding: 100px 0;
+            background: var(--gray);
+        }
+
+        .age-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .age-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .age-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .age-card-icon {
+            background: var(--primary);
+            color: white;
+            font-size: 4rem;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .age-card-content {
+            padding: 30px;
+        }
+
+        .age-range {
+            color: var(--accent);
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .age-services ul {
+            margin: 20px 0;
+        }
+
+        .age-services li {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .service-list li {
+            margin: 8px 0;
+            color: #666;
+        }
+
+        /* Doctors Section */
+        .doctors {
+            padding: 100px 0;
+            background: var(--gray);
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .doctor-image img {
+        margin: 0 auto;
+            width:auto;
+            height: 300px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .doctor-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .doctor-specialty {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .doctor-experience {
+            color: var(--secondary);
+        }
+
+        /* Appointment Section */
+        .appointment {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .appointment-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            min-height: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--gray);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .emergency-highlight {
+            background: #fadbd8;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .contact-map {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .footer-links a {
+            display: block;
+            margin: 10px 0;
+            color: #ddd;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Chat Assistant */
+        .chat-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chat-toggle {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            border-radius: 18px;
+            max-width: 80%;
+        }
+
+        .chat-message.bot {
+            background: var(--gray);
+            align-self: flex-start;
+        }
+
+        .chat-message.user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-input-container {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+        }
+
+        .chat-send {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .values, .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: left 0.3s;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+
+            .values, .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+    </style>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h2>LittleHearts</h2>
+                </div>
+                <ul class="nav-menu" id="navMenu" role="menubar">
+                    <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="#age-care" class="nav-link" role="menuitem">Age Care</a></li>
+                    <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+                    <li role="none"><a href="#doctors" class="nav-link" role="menuitem">Doctors</a></li>
+                    <li role="none"><a href="#appointment" class="nav-link" role="menuitem">Appointment</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <img src="images/asdt.png" alt="Pediatric care" class="hero-img">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <h1 class="hero-title">LittleHearts Pediatric Hospital</h1>
+    <p>Trusted Pediatric Care from Birth to 10 Years</p>
+
+    <div class="button-group hero-buttons">
+      <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+      <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- About Us Section -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="about-heading">About LittleHearts</h2>
+                <p class="section-subtitle">Your Child's Health is Our Priority</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to LittleHearts Pediatric Hospital</h3>
+                    <p>At LittleHearts Pediatric Hospital, we've been dedicated to providing exceptional healthcare for children for over 25 years. Our state-of-the-art facility combines cutting-edge medical technology with a warm, child-friendly environment that puts both children and parents at ease.</p>
+                    <p>We understand that children are not just small adults. They require specialized care, attention, and a unique approach to healthcare. Our team of experienced pediatricians and child health specialists is committed to delivering compassionate, family-centered care that supports your child's growth and development.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>25+</h4>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>30+</h4>
+                            <p>Expert Pediatricians</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>150K+</h4>
+                            <p>Healthy Children</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>24/7</h4>
+                            <p>Emergency Care</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop" alt="Child-friendly hospital environment">
+                </div>
+            </div>
+            <div class="values">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Our Mission</h4>
+                    <p>To provide exceptional pediatric healthcare that nurtures the physical, emotional, and developmental well-being of every child, supporting families with compassion and expertise.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Our Vision</h4>
+                    <p>To be the most trusted pediatric healthcare institution, known for excellence in child care, innovation in pediatric medicine, and creating a positive impact on children's lives.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Child-Friendly Care</h4>
+                    <p>Every aspect of our care is designed with children in mind - from our colorful, welcoming environment to our gentle, patient approach that makes medical visits stress-free for kids and parents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age-Wise Pediatric Care Section (Core Requirement) -->
+    <section id="age-care" class="age-care" aria-labelledby="age-care-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="age-care-heading">Age-Wise Pediatric Care</h2>
+                <p class="section-subtitle">Specialized Care Plans for Every Stage of Your Child's Growth</p>
+            </div>
+            <div class="age-cards-grid">
+                <!-- Newborn Card (0-1 year) -->
+                <div class="age-card">
+                    <div class="age-card-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="age-card-content">
+                        <h3>Newborn</h3>
+                        <p class="age-range">0 - 1 Year</p>
+                        <div class="age-services">
+                            <h4>Services Offered:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Newborn Health Screenings</li>
+                                <li><i class="fas fa-check-circle"></i> Vaccination Schedule</li>
+                                <li><i class="fas fa-check-circle"></i> Growth & Development Tracking</li>
+                                <li><i class="fas fa-check-circle"></i> Sleep & Feeding Guidance</li>
+                                <li><i class="fas fa-check-circle"></i> Routine Checkups</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-age-care" data-age="newborn">View Care</button>
+                    </div>
+                </div>
+
+                <!-- Infant Card (1-2 years) -->
+                <div class="age-card">
+                    <div class="age-card-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="age-card-content">
+                        <h3>Infant</h3>
+                        <p class="age-range">1 - 2 Years</p>
+                        <div class="age-services">
+                            <h4>Services Offered:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Immunization Programs</li>
+                                <li><i class="fas fa-check-circle"></i> Nutrition Counseling</li>
+                                <li><i class="fas fa-check-circle"></i> Milestone Development</li>
+                                <li><i class="fas fa-check-circle"></i> Speech & Motor Skills</li>
+                                <li><i class="fas fa-check-circle"></i> Regular Health Assessments</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-age-care" data-age="infant">View Care </button>
+                    </div>
+                </div>
+
+                <!-- Toddler Card (2-4 years) -->
+                <div class="age-card">
+                    <div class="age-card-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="age-card-content">
+                        <h3>Toddler</h3>
+                        <p class="age-range">2 - 4 Years</p>
+                        <div class="age-services">
+                            <h4>Services Offered:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Complete Vaccination Schedule</li>
+                                <li><i class="fas fa-check-circle"></i> Behavioral Development</li>
+                                <li><i class="fas fa-check-circle"></i> Potty Training Guidance</li>
+                                <li><i class="fas fa-check-circle"></i> Healthy Eating Habits</li>
+                                <li><i class="fas fa-check-circle"></i> Annual Physical Exams</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-age-care" data-age="toddler">View Care</button>
+                    </div>
+                </div>
+
+                <!-- Preschool Card (4-6 years) -->
+                <div class="age-card">
+                    <div class="age-card-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="age-card-content">
+                        <h3>Preschool</h3>
+                        <p class="age-range">4 - 6 Years</p>
+                        <div class="age-services">
+                            <h4>Services Offered:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> School Readiness Evaluations</li>
+                                <li><i class="fas fa-check-circle"></i> Vision & Hearing Tests</li>
+                                <li><i class="fas fa-check-circle"></i> Dental Health Checkups</li>
+                                <li><i class="fas fa-check-circle"></i> Cognitive Development</li>
+                                <li><i class="fas fa-check-circle"></i> Preventive Health Screenings</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-age-care" data-age="preschool">View Care</button>
+                    </div>
+                </div>
+
+                <!-- School Age Card (6-10 years) -->
+                <div class="age-card">
+                    <div class="age-card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="age-card-content">
+                        <h3>School Age</h3>
+                        <p class="age-range">6 - 10 Years</p>
+                        <div class="age-services">
+                            <h4>Services Offered:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Annual Wellness Exams</li>
+                                <li><i class="fas fa-check-circle"></i> Sports Physicals</li>
+                                <li><i class="fas fa-check-circle"></i> Mental Health Support</li>
+                                <li><i class="fas fa-check-circle"></i> Growth & Puberty Education</li>
+                                <li><i class="fas fa-check-circle"></i> Chronic Disease Management</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-age-care" data-age="school-age">View Care</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pediatric Services Section -->
+    <section id="services" class="services" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="services-heading">Our Pediatric Services</h2>
+                <p class="section-subtitle">Comprehensive Healthcare Solutions for Children</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-syringe"></i></div>
+                    <h3>Vaccinations</h3>
+                    <ul class="service-list">
+                        <li>Routine Childhood Vaccines</li>
+                        <li>Annual Flu Shots</li>
+                        <li>Travel Vaccinations</li>
+                        <li>Vaccination Records Management</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Child Nutrition</h3>
+                    <ul class="service-list">
+                        <li>Nutritional Assessments</li>
+                        <li>Diet Planning & Counseling</li>
+                        <li>Weight Management</li>
+                        <li>Food Allergy Management</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-ruler-vertical"></i></div>
+                    <h3>Growth Monitoring</h3>
+                    <ul class="service-list">
+                        <li>Growth Charts Tracking</li>
+                        <li>BMI Monitoring</li>
+                        <li>Developmental Milestones</li>
+                        <li>Parent Guidance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+                    <h3>Pediatric Emergency</h3>
+                    <ul class="service-list">
+                        <li>24/7 Emergency Services</li>
+                        <li>Pediatric Trauma Care</li>
+                        <li>Urgent Care for Children</li>
+                        <li>Rapid Response Team</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Developmental Checkups</h3>
+                    <ul class="service-list">
+                        <li>Developmental Screening</li>
+                        <li>Autism Spectrum Assessments</li>
+                        <li>Learning Disability Evaluation</li>
+                        <li>Early Intervention Programs</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>General Pediatrics</h3>
+                    <ul class="service-list">
+                        <li>Routine Checkups</li>
+                        <li>Illness Diagnosis & Treatment</li>
+                        <li>Chronic Disease Care</li>
+                        <li>Preventive Medicine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Expert Pediatricians</h2>
+                <p class="section-subtitle">Meet Our Caring Medical Specialists</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://rainbowhospitalsproduction.s3.ap-south-1.amazonaws.com/user/doctor/large_images/PUuLukiOtZUP2Oc6ZBqe6lXb8XJDjRm7K0djozUl.png">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <p class="doctor-specialty">Pediatrician & Neonatologist</p>
+                        <p class="doctor-experience">15+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Board Certified</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Mon-Fri: 8 AM - 5 PM</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://png.pngtree.com/png-clipart/20240701/original/pngtree-indian-doctor-woman-smiling-at-camera-png-image_15456626.png" alt="Dr. Sarah Johnson">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="doctor-specialty">Pediatric Development Specialist</p>
+                        <p class="doctor-experience">12+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Developmental Pediatrics</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Mon-Sat: 9 AM - 6 PM</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://png.pngtree.com/png-clipart/20240302/original/pngtree-indian-doctor-with-uniform-png-image_14479570.png" alt="Dr. Michael Chen">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="doctor-specialty">Pediatric Emergency Medicine</p>
+                        <p class="doctor-experience">18+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Pediatric Emergency</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Available 24/7 for Emergencies</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxYvyQ2iUP3yXc_NwS_BJ0OFtF4ff2cRk9cg&s" alt="Dr. John Anderson">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. John Anderson</h3>
+                        <p class="doctor-specialty">Pediatric Nutritionist</p>
+                        <p class="doctor-experience">10+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Pediatric Nutrition</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Tue-Fri: 9 AM - 5 PM</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg=" alt="Dr. James Wilson">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. James Wilson</h3>
+                        <p class="doctor-specialty">General Pediatrics</p>
+                        <p class="doctor-experience">20+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Board Certified</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Mon-Sat: 8 AM - 6 PM</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/Dr.+Snigda+Panuganti+-+Best+general+physician+in+Hyderabad-+lady+md+general+physician+in+hitech+city+kphb-640w.jpg" alt="Dr. Robert Taylor">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Maria Garcia</h3>
+                        <p class="doctor-specialty">Pediatric Infectious Disease</p>
+                        <p class="doctor-experience">14+ Years Experience</p>
+                        <p class="doctor-certifications">MD, FAAP, Infectious Disease</p>
+                        <p class="doctor-availability"><i class="fas fa-clock"></i> Mon-Fri: 10 AM - 4 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment" aria-labelledby="appointment-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="appointment-heading">Book an Appointment</h2>
+                <p class="section-subtitle">Schedule Your Child's Visit Today</p>
+            </div>
+            <form class="appointment-form" id="appointmentForm" aria-label="Appointment booking form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Parent/Guardian Name *</label>
+                        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError" autocomplete="name">
+                        <span class="error-message" id="nameError" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="childAge">Child's Age *</label>
+                        <input type="number" id="childAge" name="childAge" min="0" max="10" step="0.1" required aria-required="true" aria-describedby="childAgeError" placeholder="e.g., 2.5">
+                        <span class="error-message" id="childAgeError" role="alert" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phoneError" autocomplete="tel">
+                        <span class="error-message" id="phoneError" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailError" autocomplete="email">
+                        <span class="error-message" id="emailError" role="alert" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required aria-required="true" aria-describedby="serviceError">
+                            <option value="">Select Service</option>
+                            <option value="vaccination">Vaccination</option>
+                            <option value="nutrition">Child Nutrition</option>
+                            <option value="growth-monitoring">Growth Monitoring</option>
+                            <option value="emergency">Pediatric Emergency</option>
+                            <option value="developmental">Developmental Checkup</option>
+                            <option value="general">General Pediatrics</option>
+                            <option value="routine-checkup">Routine Checkup</option>
+                        </select>
+                        <span class="error-message" id="serviceError" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required aria-required="true" aria-describedby="dateError" autocomplete="off">
+                        <span class="error-message" id="dateError" role="alert" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Information (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your child's health concerns or any special requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-calendar-check"></i> Book Appointment</button>
+                <div class="form-success" id="formSuccess" role="alert" aria-live="polite" style="display: none;">
+                    <p><i class="fas fa-check-circle"></i> Thank you! Your appointment request has been submitted. We'll contact you shortly to confirm.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">We're Here to Help</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>34A, 4th East Cross Rd,<br> Suthanthira Ponvizha Nagar, Gandhi Nagar,<br>  Katpadi, Vellore, Tamil Nadu 632006 India
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>Main: <a href="tel:+1234567890">📞 +91 96008 50440</a><br>Emergency: <a href="tel:+1234567891" class="emergency">+1 (234) 567-8901</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="operations@vattara.com">📧 operations@vattara.com</a><br><a href="📧 operations@vattara.com"></a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item emergency-highlight">
+                        <div class="contact-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div>
+                            <h3>24/7 Pediatric Emergency</h3>
+                            <p>For life-threatening emergencies, call our emergency hotline immediately.</p>
+                            <a href="tel:+1234567891" class="btn btn-emergency"><i class="fas fa-mobile-alt"></i> Call Emergency</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>📍 Map Location</p>
+                        <p class="map-note"><div style="width:100%"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=34A,%204th%20East%20Cross%20Rd,%20Suthanthira%20Ponvizha%20Nagar,%20Gandhi%20Nagar,%20Katpadi,%20Vellore,%20Tamil%20Nadu%20632006+(vattara)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/en/find-population-on-map/">Population map</a></iframe></div></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heart-pulse"></i>
+                        <h3>LittleHearts</h3>
+
+                    </div>
+                    <p class="footer-tagline">Trusted Pediatric Care from Birth to 10 Years</p>
+                    <p>Your trusted partner in pediatric healthcare for over 25 years, providing world-class medical services with a child-first approach.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#age-care">Age Care</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#appointment">Appointment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Vaccinations</a></li>
+                        <li><a href="#services">Child Nutrition</a></li>
+                        <li><a href="#services">Growth Monitoring</a></li>
+                        <li><a href="#services">Pediatric Emergency</a></li>
+                        <li><a href="#services">Developmental Checkups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/17qqL7Tg7N/" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/919876543210" aria-label="WhatsApp" class="social-icon"> <i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/vattara_in?igsh=eDk1YnByOHhkODcy" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 9600850440</p>
+                        <p><i class="fas fa-envelope"></i> operations@vattara.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LittleHearts Pediatric Hospital. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Assistant (Floating) -->
+    <div class="chat-assistant" id="chatAssistant">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open chat assistant">
+            <i class="fas fa-comments"></i>
+            <span class="chat-notification"></span>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <i class="fas fa-robot"></i>
+                    <h3>Pediatric Care Assistant</h3>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be inserted here by JavaScript -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Type your message..." aria-label="Type your message">
+                <button class="chat-send" id="chatSend" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+<script>
+/* ===============================
+   NAVBAR SCROLL EFFECT
+================================ */
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+/* ===============================
+   MOBILE MENU TOGGLE
+================================ */
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+/* Close menu on link click */
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
+
+/* ===============================
+   CHAT ASSISTANT LOGIC
+================================ */
+const chatToggle = document.getElementById("chatToggle");
+const chatWindow = document.getElementById("chatWindow");
+const chatClose = document.getElementById("chatClose");
+const chatInput = document.getElementById("chatInput");
+const chatMessages = document.getElementById("chatMessages");
+const chatSend = document.getElementById("chatSend");
+
+function addMessage(text, type = "bot") {
+  const msg = document.createElement("div");
+  msg.className = `chat-message ${type}`;
+  msg.innerHTML = `<p class="message-text">${text}</p>`;
+  chatMessages.appendChild(msg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+chatToggle.addEventListener("click", () => {
+  chatWindow.classList.add("active");
+  addMessage("👶 Hello! I’m your pediatric assistant. How can I help?");
+});
+
+chatClose.addEventListener("click", () => {
+  chatWindow.classList.remove("active");
+});
+
+chatSend.addEventListener("click", sendMessage);
+chatInput.addEventListener("keypress", e => {
+  if (e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  addMessage(text, "user");
+  chatInput.value = "";
+
+  setTimeout(() => {
+    addMessage("Thank you! Our team will assist you shortly. 🏥");
+  }, 800);
+}
+
+/* ===============================
+   AGE CARE BUTTON ACTION
+================================ */
+document.querySelectorAll(".btn-age-care").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("📋 Detailed care plan will be shown here (modal / page).");
+  });
+});
+
+/* ===============================
+   APPOINTMENT FORM VALIDATION
+================================ */
+const appointmentForm = document.getElementById("appointmentForm");
+
+if (appointmentForm) {
+  appointmentForm.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("✅ Appointment request submitted successfully!");
+    appointmentForm.reset();
+  });
+}
+</script>
+</body>
+</html>
